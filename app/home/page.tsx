@@ -20,29 +20,34 @@ export default async function Home() {
                 <div className="py-6 font-bold bg-purple-950 text-center">
                     {`Welcome ${user.user_metadata.username}`}
                 </div>
+                {/* Nav */}
                 <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
                     <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
-                        <button>BUTTON</button>
+                        <div>Avatar/Logo</div>
                         <AuthButton />
                     </div>
                 </nav>
             </div>
 
+            {/* Main */}
             <div className="animate-in flex-1 flex flex-col gap-20 opacity-0 max-w-4xl px-3">
                 <Header />
-                <main className="flex-1 flex flex-col gap-6"></main>
+                <main className="flex-1 flex justify-center  gap-6">
+                    <h2 className="font-bold text-4xl mb-4">Test</h2>
+                </main>
             </div>
 
+            {/* Footer */}
             <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
                 <p>
                     Powered by{' '}
                     <a
-                        href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
+                        href=""
                         target="_blank"
                         className="font-bold hover:underline"
                         rel="noreferrer"
                     >
-                        Supabase
+                        The Hof
                     </a>
                 </p>
             </footer>

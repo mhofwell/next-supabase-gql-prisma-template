@@ -1,0 +1,26 @@
+datasource db {
+    provider  = "postgresql"
+    url       = env("DATABASE_URL")
+    directUrl = env("DIRECT_URL")
+    // schemas   = ["public", "auth"]
+}
+
+generator client {
+    provider = "prisma-client-js"
+    // previewFeatures = ["multiSchema"]
+}
+
+model User {
+    id         Int      @id
+    first_name String?
+    last_name  String?
+    username   String?
+    role       Role     @default(USER)
+    createdAt  DateTime @default(now())
+    updatedAt  DateTime @updatedAt
+}
+
+enum Role {
+    ADMIN
+    USER
+}
